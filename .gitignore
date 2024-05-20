@@ -1,0 +1,5 @@
+#carpetas a ignorar
+.vscode/
+
+#archivos a ignorar
+*.exe
