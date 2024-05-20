@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.sql": "sql",
+        "*.gcc": "c",
+        "stdio.h": "c",
+        "ostream": "cpp",
+        "cstdlib": "c",
+        "algorithm": "c",
+        "functional": "c"
+    }
+}
