@@ -1,1 +1,1 @@
-# INF317_prgrmacion_distribuida_y_paralela
+# INF317_programacion_distribuida_y_paralela
