@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <omp.h>
 
+// cd ../ejer08
+
 int main() {
     int n = 20; // n terminos
     int m = 8;  // m procesadores

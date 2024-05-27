@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// cd ejer01
 // Función para sumar dos números
 int suma(int *a, int *b) {
     return *a + *b;
@@ -14,7 +15,7 @@ int resta(int *a, int *b){
 int multiplicar(int *a, int *b) {
     int resultado = 0;
     for (int i = 0; i < *b; ++i) {
-        resultado += *a;
+        resultado = suma(&resultado, b);
     }
     return resultado;
 }
@@ -22,7 +23,7 @@ int multiplicar(int *a, int *b) {
 // Divicion entera de dos numeros usando restas
 int div_entera(int *a, int *b){
     int resultado = 0;
-    for (int i = *a; i > *b; i-=*b){
+    for (int i = *a; i > *b; i=resta(&i, b)){
         resultado += 1;
     }
     return resultado;

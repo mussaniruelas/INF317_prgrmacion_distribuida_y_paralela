@@ -12,7 +12,17 @@ def generador_de_serie(nt, np):
     """Funcion genaradora de la serie de pares"""
     # Calculo de los rangos por proceso
     rango = nt // np
-    rangos = [(i * rango + 1, (i + 1) * rango + 1) for i in range(np)]
+    mod = nt % np
+    rangos = []
+    for i in range(np):
+        if i < mod:
+            ini = i * rango + i
+            fin = (i + 1) * rango + i
+            rangos.append((ini,fin))
+        else:
+            ini = i * rango + mod
+            fin = (i + 1) * rango + mod
+            rangos.append((ini,fin))
 
     # Creamos el pool
     with multiprocessing.Pool(np) as pool:

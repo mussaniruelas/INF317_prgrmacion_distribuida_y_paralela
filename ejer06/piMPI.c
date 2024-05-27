@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <math.h>
 
+// cd ../ejer06
+// mpiexec -n 8 piMPI.exe
+
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
     int ip,np;

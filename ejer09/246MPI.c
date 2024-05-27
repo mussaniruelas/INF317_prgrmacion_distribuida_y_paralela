@@ -1,4 +1,7 @@
 // Genere la serie 2, 4, 6, 8, 10, 12, 14, 16, 18… en M vectores(procesadores) para N términos con MPI 
+
+// cd ejer09
+// mpiexec -n 8 246MPI.exe 
 #include <mpi.h>
 #include <stdio.h>
 #include <math.h>

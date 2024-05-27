@@ -2,6 +2,9 @@
 #include <stdio.h>
 
 // Función para calcular el n-ésimo término de Fibonacci
+// cd ../ejer12
+// mpiexec -n 8 fiboMPI.exe
+
 int fibonacci(int n) {
     if (n <= 0) return 0;
     if (n == 1) return 1;

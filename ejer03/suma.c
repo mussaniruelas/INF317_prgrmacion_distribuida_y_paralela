@@ -1,6 +1,8 @@
 #include <omp.h>
 #include <stdio.h>
 
+// cd../ejer03
+
 int main() {
     int mul = 0;
     int div = 0;
