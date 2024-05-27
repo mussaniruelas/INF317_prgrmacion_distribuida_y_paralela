@@ -1,6 +1,8 @@
 #include <mpi.h>
 #include <stdio.h>
 
+// mpiexec -n 8 pruebas.exe
+
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
 

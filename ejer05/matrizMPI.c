@@ -1,6 +1,10 @@
 #include <mpi.h>
 #include <stdio.h>
 
+// cd ../ejer05
+// cd ejer05
+// mpiexec -n 8 matrizMPI.exe
+
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
 
