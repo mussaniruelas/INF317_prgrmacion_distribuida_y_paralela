@@ -1,16 +1,18 @@
 #include <mpi.h>
 #include <stdio.h>
 
+// mpiexec -n 8 hola2.exe
+
 int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
 
-    int world_size;
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    int np;
+    MPI_Comm_size(MPI_COMM_WORLD, &np);
 
-    int world_rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    int ip;
+    MPI_Comm_rank(MPI_COMM_WORLD, &ip);
 
-    printf("Hello world from rank %d out of %d processors\n", world_rank, world_size);
+    printf("hola mundo desde el proceso %d de %d procesadores\n", ip, np);
 
     MPI_Finalize();
     return 0;
