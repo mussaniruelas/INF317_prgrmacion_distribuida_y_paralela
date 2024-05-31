@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &ip);
     MPI_Comm_size(MPI_COMM_WORLD, &np);
 
-    int n = 60;
+    int n = 10;
     int v[n];
     int nro_elem = n / np, resto = n % np;
     int seccion_actual = nro_elem + (( ip < resto) ? 1 : 0);
@@ -34,10 +34,13 @@ int main(int argc, char** argv) {
     MPI_Allgather(&seccion_actual, 1, MPI_INT, nro_elem_sec, 1, MPI_INT,MPI_COMM_WORLD); // para el vector de nro elementos
     MPI_Allgather(&ajuste, 1, MPI_INT,pos_sec,1,MPI_INT,MPI_COMM_WORLD); //para el vector de posiciones
     
-    for (int i = 0; i < seccion_actual; i++)
+    for (int i = 0; i < seccion_actual; i++){
         vector_local[i] = 2 * (i + ajuste + 1);
+        printf("%d, ",vector_local[i]);
+    }
 
     // recolectar todo en el resultado
+    
     MPI_Gatherv(vector_local, seccion_actual, MPI_INT, v, nro_elem_sec, pos_sec, MPI_INT, 0, MPI_COMM_WORLD);
         
 

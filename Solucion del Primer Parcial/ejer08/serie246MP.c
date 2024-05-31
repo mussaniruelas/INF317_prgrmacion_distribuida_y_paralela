@@ -4,7 +4,7 @@
 // cd ../ejer08
 
 int main() {
-    int n = 20; // n terminos
+    int n = 10; // n terminos
     int m = 8;  // m procesadores
     int v[n];
     int ns = n/m, r = n %m;
@@ -25,10 +25,10 @@ int main() {
                 ini = id * ns + r;
                 fin = ini + ns; 
             }
-            //printf("id: %d, ini: %d, fin: %d\n\n",id,ini,fin);
+            printf("id: %d, ini: %d, fin: %d\n\n",id,ini,fin);
             for (int j = ini; j < fin; j++)
             {
-                v[j] = 2 * j+2;
+                v[j] = 2 * j + 2;
                 //printf("j:%d :hilo %d: %d\n",j, id, v[i]);
             }
         }

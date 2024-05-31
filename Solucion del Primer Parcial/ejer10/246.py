@@ -6,6 +6,7 @@ def f(inicio, fin):
     v = []
     for i in range(inicio, fin):
         v.append(2 * i)
+    print(v)
     return v
 
 def generador_de_serie(nt, np):
@@ -17,7 +18,7 @@ def generador_de_serie(nt, np):
     for i in range(np):
         if i < mod:
             ini = i * rango + i
-            fin = (i + 1) * rango + i
+            fin = (i + 1) * rango + i + 1
             rangos.append((ini,fin))
         else:
             ini = i * rango + mod
@@ -33,7 +34,7 @@ def generador_de_serie(nt, np):
     return serie
 
 if __name__ == '__main__':
-    num_terminos = 100
+    num_terminos = 20
     num_procesos = multiprocessing.cpu_count()
 
     # Generar la serie
